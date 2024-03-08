@@ -1,26 +1,13 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { Post } from "../components/post";
-import { mockedData } from "../data";
+import { useAppContext } from "../app-context";
 
 export const Posts = () => {
-  const { productId } = useParams();
-  const product = mockedData.products.find(
-    (product) => product.id === productId
-  );
-  const productPosts = mockedData.products.find(
-    (product) => product.id === productId
-  )
-    ? {
-        productImage: product?.productImage,
-        productName: product?.productName,
-        prodAds: product?.prodAds,
-      }
-    : {};
-
+  const { productPosts } = useAppContext();
   return (
     <section>
-      <h2>Facebook Posts</h2>
+      <h2>Facebook Posts Ads</h2>
+      <p>Product name: {productPosts.productName}</p>
       <div>
         <form method="post">
           <button type="submit">Add new post</button>

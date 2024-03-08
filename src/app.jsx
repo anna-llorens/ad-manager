@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "./sections/headerns/header";
-import { Products } from "./sections/products/products";
-import { AppContext } from "./app-context;
-import "./app.css";
-import { data } from "./data;
+import { Header } from "./sections/header";
+import { Products } from "./sections/products";
+import { AppContext } from "./app-context";
+import "./App.css";
+import { data } from "./data";
 
 export default function App() {
   return (
