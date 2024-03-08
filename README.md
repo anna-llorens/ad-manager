@@ -2,13 +2,13 @@
 
 ## 🚀 Quick start
 
-In the project directory you can run:
+To start the app you go In the project directory and run:
 
 ```bash
 yarn && yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can view it on your browser [http://localhost:3000](http://localhost:3000).
 
 ### ℹ️ About the App
 
@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### Packages
 
-- [react-router](https://reactrouter.com/en/main)
+- [react-router](https://reactrouter.com/en/main). Use v6.22.3
 
 #### Athour
 

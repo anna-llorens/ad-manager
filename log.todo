@@ -1,0 +1,8 @@
+- Pass data to posting view
+- Add react context to handle display of the data
+- Add remove form
+- Add edit form
+- Add a form to create a new post
+- Add import image feature to new post form
+- Improve styling
+- Add create new product form

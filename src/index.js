@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import ErrorPage from "./error-page";
+import App from "./app";
+import ErrorPage from "./views/error-view";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import FacebookAds from "./sections/facebook-ads";
+import { Posts } from "./sections/posts";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "products/:productId",
-        element: <FacebookAds />,
+        element: <Posts />,
       },
     ],
   },

@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Post from "../components/post";
-import { mockedData } from "../mocks";
+import { Post } from "../components/post";
+import { mockedData } from "../data";
 
-const AdsList = () => {
+export const Posts = () => {
   const { productId } = useParams();
   const product = mockedData.products.find(
     (product) => product.id === productId
@@ -20,17 +20,17 @@ const AdsList = () => {
 
   return (
     <section>
-      <h3>Facebook Ads</h3>
+      <h2>Facebook Posts</h2>
       <div>
         <form method="post">
           <button type="submit">Add new post</button>
         </form>
       </div>
 
-      {productPosts?.prodAds?.map((ad, index) => (
+      {productPosts?.prodAds?.map((post) => (
         <Post
-          key={index}
-          ad={ad}
+          key={post.id}
+          post={post}
           productImage={productPosts?.productImage}
           productName={productPosts?.productName}
         />
@@ -38,5 +38,3 @@ const AdsList = () => {
     </section>
   );
 };
-
-export default AdsList;

@@ -1,17 +1,18 @@
 import { Form } from "react-router-dom";
+import "./components.css";
 
-export default function Post({ ad, productImage, productName }) {
+export const Post = ({ post, productImage, productName }) => {
   const onDeleteAd = () => {
     alert("Are you sure you want to delete this ad? // TODO");
   };
 
   return (
-    <div id="posting-ads">
+    <div className="post">
       <div>
         <img src={productImage} alt="product" />
       </div>
       <div>
-        <h1>{ad?.postName ?? "No campain name"}</h1>
+        <h1>{post?.postName ?? "No campain name"}</h1>
         {productName ?? <p>{productName}</p>}
         <div>
           <Form action="edit">
@@ -24,4 +25,4 @@ export default function Post({ ad, productImage, productName }) {
       </div>
     </div>
   );
-}
+};
