@@ -1,14 +1,18 @@
 const prod1Ads = [
   {
     id: "prod1Ad1",
-    postName: "winter campain",
+    isEnabled: true,
+    postName: "Winter campain 2023/2024",
+    title: "Max's Sporting Goods - Online Store",
     image:
       "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626282482/coding-challenge/wp3699391.jpg",
-    postMessage: "Get ready for the winter with our dumbbells",
+    postMessage:
+      "Are you ready for this winter? At Max's Sports we are preparing for you. Try out  our dumbbells for free. Get it now! 🏋️‍♂️ ",
   },
   {
     id: "prod1Ad2",
     postName: "summer",
+    title: "Max's Sporting Goods - Online Store",
     postMessage: "Get ready for the summer with our dumbbells",
     image:
       "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626282482/coding-challenge/wp3699391.jpg",
@@ -16,6 +20,7 @@ const prod1Ads = [
   {
     id: "prod1Ad3",
     postName: "spring campain",
+    title: "Max's Sporting Goods - Online Store",
     postMessage: "Get ready for the spring with our dumbbells",
     image:
       "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626282482/coding-challenge/wp3699391.jpg",
@@ -23,6 +28,7 @@ const prod1Ads = [
   {
     id: "prod1Ad4",
     postName: "fall campain",
+    title: "Max's Sporting Goods - Online Store",
     postMessage: "Get ready for the fall with our dumbbells",
     image:
       "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626282482/coding-challenge/wp3699391.jpg",
@@ -33,6 +39,7 @@ const prod2Ads = [
   {
     id: "prod2Ad1",
     postName: "winter",
+    title: "Max's Sporting Goods - Online Store",
     postMessage: "Get ready for the winter with our jump rope",
     image:
       "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626333092/coding-challenge/rope.jpg",
@@ -40,6 +47,7 @@ const prod2Ads = [
   {
     id: "prod2Ad2",
     postName: "summer",
+    title: "Max's Sporting Goods - Online Store",
     postMessage: "Get ready for the summer with our jump rope",
     image:
       "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626333092/coding-challenge/rope.jpg",
@@ -59,8 +67,9 @@ const prod3Ads = [
 const company = {
   logo: "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626282485/coding-challenge/IMG_9843.png",
   name: "Max's Sporting Goods",
+  url: "MaxSportinGoods.com",
   description:
-    "Max's Sporting Goods is a retail store that sells sporting goods for exercising at home",
+    "Visit the retail store that sells sporting goods for exercising at home",
 };
 
 export const products = [

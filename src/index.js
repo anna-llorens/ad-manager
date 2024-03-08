@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./app";
 import ErrorPage from "./views/error-view";
+import EditView from "./views/edit-view";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Posts } from "./sections/posts";
+import { Body } from "./sections/body";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "products/:productId",
-        element: <Posts />,
+        element: <Body />,
+      },
+      {
+        path: ":productId/:postId/edit",
+        element: <EditView />,
       },
     ],
   },

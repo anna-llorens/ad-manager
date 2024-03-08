@@ -1,27 +1,29 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export const AppContext = createContext("");
+export const AppContext = createContext({
+  company: { name: "", description: "", url: "", logo: "" },
+  products: {},
+  product: null,
+  ad: null,
+});
 
 export const useAppContext = () => {
   const data = useContext(AppContext);
-  const { productId } = useParams();
-  const [products, setProducts] = useState(data?.products);
-  const [company, setCompany] = useState(data?.company);
+  const { productId, postId } = useParams();
+  const { company, products } = data;
+  const [product, setProduct] = useState(null);
+  const [ad, setAd] = useState(null);
 
-  const [selectedProduct, setSelectedProduct] = useState({});
-
+  // Update selected product
   useEffect(() => {
-    setSelectedProduct(products.find((product) => product.id === productId));
+    setProduct(products?.find((product) => product.id === productId));
   }, [data, productId, products]);
 
-  const productPosts = products.find((product) => product.id === productId)
-    ? {
-        productImage: selectedProduct?.productImage,
-        productName: selectedProduct?.productName,
-        prodAds: selectedProduct?.prodAds,
-      }
-    : {};
+  // Update selected ad
+  useEffect(() => {
+    setAd(product?.prodAds?.find((ad) => ad.id === postId));
+  }, [postId, products, product?.prodAds]);
 
-  return { productPosts, products, company };
+  return { company, products, product, ad };
 };
