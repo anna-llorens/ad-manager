@@ -1,10 +1,10 @@
 import React from "react";
-import { FacebookPosts } from "../components/facebook-posts";
+import { AdsManager } from "../components/ads-manager";
 
 export const Body = () => {
   return (
     <main className="main">
-      <FacebookPosts />
+      <AdsManager />
     </main>
   );
 };

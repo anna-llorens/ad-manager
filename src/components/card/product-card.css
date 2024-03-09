@@ -3,10 +3,8 @@
   align-items: center;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
-  width: 300px;
   min-width: 200px;
-  padding: 4px;
-  margin-block: 8px;
+  padding: 4px 2px;
 }
 
 .product-card:hover {
@@ -15,7 +13,16 @@
   background-color: #999999;
 }
 
-.product-card .product-name {
+.product-name {
   font-weight: var(--font-semi-bold);
   margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 60px;
+  }
+  .product-name {
+    font-size: 12px;
+  }
 }

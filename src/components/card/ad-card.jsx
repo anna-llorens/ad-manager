@@ -22,7 +22,7 @@ export const AdCard = ({ post }) => {
       </div>
 
       <div className="body-card">
-        <FacebookCard />
+        <FacebookCard className="width-50" isCondensed />
         <div className="cta">
           <Form action={`/${location.pathname}/${post.id}/edit`}>
             <Button type="submit">Edit</Button>

@@ -2,21 +2,25 @@
 
 ## 🚀 Quick start
 
-To start the app, go in the project directory and run:
-
 ```bash
 yarn && yarn start
 ```
 
-You can view it opening the browser on [http://localhost:3000](http://localhost:3000).
+Localhost on [http://localhost:3000](http://localhost:3000)
 
 ### About the App
 
-Responsive web app to manage Facebook Ads the products from an online Sports store.
+Responsive web app to manage the Facebook Ads from an online Sports store.
 
-- Develop with React, Javascipt and CSS.
+- Developed with React, JavaScript and Scss.
 
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#### App Routes
+
+- `/products`: Default app route. Contain the App top bar navigation and the list of products container.
+- `/products/:productId`: Shows the Facebooks ads related to the selected prod
+- `/products/:productId/:productIdAdId/edit`: Edit the Facebook post Ad content
 
 #### Packages
 

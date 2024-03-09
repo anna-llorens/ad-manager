@@ -15,12 +15,20 @@
   display: flex;
   justify-content: space-between;
 }
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
 
 .text-ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   -webkit-line-clamp: 1;
+}
+
+.width-50 {
+  width: 50%;
 }
 
 .avatar {
@@ -35,14 +43,20 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .avatar {
+    display: none;
+  }
+}
+
 .box-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   background-color: #fff;
   border: 1px solid var(--border-color);
   box-shadow: none;
-  max-width: 1200px;
+  max-width: 1582px;
   padding: 18px;
   h2 {
     margin: 0;
