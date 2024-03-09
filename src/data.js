@@ -103,6 +103,26 @@ export const products = [
     id: "prod3",
     prodAds: prod3Ads,
   },
+  {
+    productName: "Yoga Mat",
+    productDescription:
+      "A high-quality yoga mat can make a big difference in your practice. It provides the cushioning and traction you need to perform poses safely and comfortably.",
+    productImage:
+      "https://elyogamola.com/wp-content/uploads/2018/12/grosorTpemat.jpg",
+    price: 20,
+    id: "prod4",
+    prodAds: prod1Ads,
+  },
+  {
+    productName: "Exercise Ball",
+    productDescription:
+      "An exercise ball is a great tool for improving balance and stability. It can also be used for a variety of exercises to strengthen your core and other muscles.",
+    productImage:
+      "https://sunnyhealthfitness.com/cdn/shop/articles/10-fun-effective-gym-ball-exercises-01_1100x.jpg?v=1611016541",
+    price: 15,
+    id: "prod5",
+    prodAds: prod1Ads,
+  },
 ];
 
 export const data = {

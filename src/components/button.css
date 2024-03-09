@@ -1,0 +1,25 @@
+.button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  line-height: 1.5;
+  margin: 4px;
+}
+
+.button {
+  color: #3992ff;
+  font-weight: 500;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.button:active {
+  box-shadow: var(--box-shadow);
+  transform: translateY(1px);
+}

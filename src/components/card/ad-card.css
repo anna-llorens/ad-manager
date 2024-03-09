@@ -1,0 +1,16 @@
+.ad-card {
+  margin-block: 20px; /* Add Space between ads */
+}
+
+.ad-card .cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ad-card .body-card {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}

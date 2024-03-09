@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+// App initial state
 export const AppContext = createContext({
   company: { name: "", description: "", url: "", logo: "" },
   products: {},
@@ -18,12 +19,12 @@ export const useAppContext = () => {
   // Update selected product
   useEffect(() => {
     setProduct(products?.find((product) => product.id === productId));
-  }, [data, productId, products]);
+  }, [productId, products]);
 
   // Update selected ad
   useEffect(() => {
     setAd(product?.prodAds?.find((ad) => ad.id === postId));
-  }, [postId, products, product?.prodAds]);
+  }, [postId, product?.prodAds]);
 
   return { company, products, product, ad };
 };
