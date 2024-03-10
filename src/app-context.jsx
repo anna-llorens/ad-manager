@@ -6,7 +6,13 @@ export const AppContext = createContext({
   company: { name: "", description: "", url: "", logo: "" },
   products: {},
   product: null,
-  ad: null,
+  ad: {
+    campainName: "No campain name",
+    postName: "",
+    postText: "",
+    postImage: "",
+    postUrl: "",
+  },
 });
 
 export const useAppContext = () => {

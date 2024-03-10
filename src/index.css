@@ -48,13 +48,20 @@ textarea:hover,
 input:hover {
   box-shadow: var(--box-shadow);
 }
-form[action$="destroy"] button {
-  color: #f44250;
-}
 a {
   color: black;
   text-decoration: none;
 }
 li {
   list-style: none;
+}
+/*Delete button */
+form[action$="destroy"] button {
+  color: #f44250;
+}
+// Small screens (landscape phones, 576px and up)
+@media (max-width: 768px) {
+  .avatar {
+    display: none;
+  }
 }

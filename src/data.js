@@ -123,6 +123,16 @@ export const products = [
     id: "prod5",
     prodAds: prod1Ads,
   },
+  {
+    productName: "Speed runner",
+    productDescription:
+      "An exercise ball is a great tool for improving balance and stability. It can also be used for a variety of exercises to strengthen your core and other muscles.",
+    productImage:
+      "https://media.cecotec.cloud/07080/drumfit-wayhome-1600-obelia_owwk53_5.jpg",
+    price: 15,
+    id: "prod6",
+    prodAds: prod1Ads,
+  },
 ];
 
 export const data = {

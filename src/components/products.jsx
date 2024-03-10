@@ -1,15 +1,18 @@
-import "./products-list.css";
+import "./products.css";
 import { useAppContext } from "../app-context";
 import { ProductCard } from "./card/product-card";
+import { Card } from "./card/card";
 
-export const ProductsList = ({ className }) => {
+export const Products = ({ className }) => {
   const { products } = useAppContext();
   return (
-    <section className={`products-list ${className ?? ""}`}>
-      <div className="box-container">
-        <h3>Products</h3>
+    <section className={className ?? ""}>
+      <Card
+        title="Your products"
+        cta={{ copy: "Add new product", action: "submit" }}
+      >
         {products ? (
-          <div className="products-card-container">
+          <div className="products">
             {products.map((product) => (
               <ProductCard
                 key={product.id}
@@ -24,7 +27,7 @@ export const ProductsList = ({ className }) => {
             🤗 Welcome to Ad Manager! You can start by adding your first product
           </p>
         )}
-      </div>
+      </Card>
     </section>
   );
 };

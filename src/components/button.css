@@ -23,3 +23,8 @@
   box-shadow: var(--box-shadow);
   transform: translateY(1px);
 }
+
+button[action$="save"],
+button[action$="destroy"] {
+  color: #f44250;
+}
