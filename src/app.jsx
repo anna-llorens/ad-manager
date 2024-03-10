@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "./sections/header";
 import { AppContext } from "./app-context";
-import "./app.css";
+import "./app.scss";
 import { Products } from "./components/products";
 
 import { data } from "./data";

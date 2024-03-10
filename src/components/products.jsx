@@ -1,4 +1,4 @@
-import "./products.css";
+import "./products.scss";
 import { useAppContext } from "../app-context";
 import { ProductCard } from "./card/product-card";
 import { Card } from "./card/card";

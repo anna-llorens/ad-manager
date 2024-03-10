@@ -2,7 +2,7 @@ import React from "react";
 import { AdCard } from "./card/ad-card";
 import { useAppContext } from "../app-context";
 import { Card } from "./card/card";
-import "./ads-manager.css";
+import "./ads-manager.scss";
 
 export const AdsManager = () => {
   const { product } = useAppContext();

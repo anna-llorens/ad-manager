@@ -1,5 +1,5 @@
 import { Button } from "../button";
-import "./card.css";
+import "./card.scss";
 
 export const Card = ({ title, className, cta, children }) => {
   return (

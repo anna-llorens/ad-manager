@@ -1,4 +1,4 @@
-import "./product-card.css";
+import "./product-card.scss";
 
 export const ProductCard = ({ id, productImage, productName, isSelected }) => (
   <a className={`product-card`} href={`/products/${id}`}>

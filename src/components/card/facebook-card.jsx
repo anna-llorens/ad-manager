@@ -1,5 +1,5 @@
 import { useAppContext } from "../../app-context";
-import "./facebook-card.css";
+import "./facebook-card.scss";
 import { ReactComponent as Like } from "../../static/like.svg";
 import { ReactComponent as Comment } from "../../static/comment.svg";
 import { ReactComponent as Share } from "../../static/share.svg";

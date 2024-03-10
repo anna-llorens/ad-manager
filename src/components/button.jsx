@@ -1,4 +1,4 @@
-import "./button.css";
+import "./button.scss";
 export const Button = ({ children, ...props }) => {
   return (
     <button className="button" {...props}>
