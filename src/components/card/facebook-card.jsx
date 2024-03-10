@@ -11,7 +11,7 @@ export const FacebookCard = ({ isCondensed = false, className }) => {
   return (
     <Card className={`post ${isCondensed ? "condensed" : ""}`}>
       <div className="post-header">
-        <div className="company-info">
+        <div className="post-header-body">
           <img
             className="company-logo avatar"
             src={company?.logo}

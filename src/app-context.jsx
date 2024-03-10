@@ -1,18 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { mockAd, mockCompany, mockProduct } from "./data";
 
 // App initial state
 export const AppContext = createContext({
-  company: { name: "", description: "", url: "", logo: "" },
-  products: {},
-  product: null,
-  ad: {
-    campainName: "No campain name",
-    postName: "",
-    postText: "",
-    postImage: "",
-    postUrl: "",
-  },
+  company: mockCompany,
+  products: [mockProduct],
+  product: mockProduct,
+  ad: mockAd,
 });
 
 export const useAppContext = () => {
@@ -31,6 +26,8 @@ export const useAppContext = () => {
   useEffect(() => {
     setAd(product?.prodAds?.find((ad) => ad.id === postId));
   }, [postId, product?.prodAds]);
+
+  console.log("data", data);
 
   return { company, products, product, ad };
 };

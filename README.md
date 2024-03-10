@@ -10,7 +10,7 @@ Localhost on [http://localhost:3000](http://localhost:3000)
 
 ### About the App
 
-Responsive web app to manage the Facebook Ads from an online Sports store.
+Responsive web app to manage Facebook Ads for selling products online.
 
 - Developed with React, JavaScript and Scss.
 
@@ -26,6 +26,7 @@ Responsive web app to manage the Facebook Ads from an online Sports store.
 
 - [react-router](https://reactrouter.com/en/main) Note: use v6.22.3.
 - [sass](https://sass-lang.com/)
+- [short-unique-id](https://shortunique.id/) Generates unique ID's
 
 #### Athour
 

@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
+import { getMockedData } from "./helpers";
+import { AppContext } from "./app-context";
+
+const data = getMockedData("Product");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

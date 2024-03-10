@@ -10,7 +10,7 @@ export const AdsManager = () => {
     <section>
       <Card
         title="Manage Facebook ads"
-        cta={{ copy: "Add new post", action: "submit" }}
+        action={{ copy: "Add new post", action: "submit" }}
       >
         <div className="ads-list">
           {product?.prodAds?.map((post) => (

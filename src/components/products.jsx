@@ -1,30 +1,21 @@
 import "./products.scss";
 import { useAppContext } from "../app-context";
-import { ProductCard } from "./card/product-card";
 import { Card } from "./card/card";
 
 export const Products = ({ className }) => {
   const { products } = useAppContext();
+  console.log("products", products);
   return (
     <section className={className ?? ""}>
       <Card
         title="Your products"
-        cta={{ copy: "Add new product", action: "submit" }}
+        action={{ copy: "Add new product", action: "submit" }}
       >
-        {products ? (
-          <div className="products">
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                id={product?.id}
-                productName={product?.productName}
-                productImage={product?.productImage}
-              />
-            ))}
-          </div>
+        {products.length ? (
+          ""
         ) : (
           <p>
-            🤗 Welcome to Ad Manager! You can start by adding your first product
+            ✨ Welcome to Ad Manager! You can start by adding your first product
           </p>
         )}
       </Card>

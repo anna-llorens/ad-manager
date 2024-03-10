@@ -1,40 +1,30 @@
 .post {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border: 1px solid var(--border-color);
-  box-shadow: none;
-  width: 70%;
-  h2,
-  h4 {
-    margin: 0;
-  }
+  padding: 0;
 }
 
-/* Card header */
 .post-header {
   padding-inline: 16px;
   padding-bottom: 8px;
-}
-.company-link {
-  font-weight: var(--font-semi-bold);
-}
-.facebook-ad-info {
-  color: var(--secondary-color);
-}
-.company-info {
-  display: flex;
-  font-size: 14px;
-  gap: 8px;
-  width: 100%;
+  &-body {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 8px;
+    .company-link {
+      font-weight: var(--font-semi-bold);
+      color: var(--black-color);
+    }
+    .facebook-ad-info {
+      color: var(--secondary-color);
+    }
+  }
 }
 .post-image {
-  margin-top: 8px;
   width: 100%;
   height: 100%;
 }
 
-/* Card body */
 .post-body {
   background-color: #f0f2f5;
   border-bottom: 1px solid var(--border-color);
@@ -65,11 +55,6 @@
   white-space: nowrap;
   color: #050505;
 }
-@media screen and (max-width: 600px) {
-  .post-cta {
-    display: none;
-  }
-}
 
 .post-footer {
   display: flex;
@@ -99,6 +84,34 @@
 /* Condensed  */
 .condensed {
   .post-header {
-    background: red;
+    padding-inline: 6px;
+    &-body {
+      margin-top: 2px;
+    }
+  }
+  .company-name {
+    font-size: 12px;
+  }
+  .company-web-site {
+    display: none;
+  }
+  .post-footer {
+    padding-block: 2px;
+  }
+  .social-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .social-button {
+    font-size: 12px;
+  }
+  .avatar {
+    display: none;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .post-cta {
+    display: none;
   }
 }

@@ -13,8 +13,8 @@ export const AdCard = ({ post }) => {
   };
 
   return (
-    <Card title={post?.postName} cta={{ copy: "ACTIVE", action: "submit" }}>
-      <CheckBox label="Show on facebook: " />
+    <Card title={post?.postName} action={post.status}>
+      {/* <CheckBox label="Show on facebook: " /> */}
       <div className="flex-space-between">
         <FacebookCard isCondensed />
         <div className="d-flex">
