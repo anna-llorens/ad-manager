@@ -1,7 +1,9 @@
 import { Form, useLocation } from "react-router-dom";
 import { Button } from "../button";
-import "./ad-card.css";
+
 import { FacebookCard } from "./facebook-card";
+import { Card } from "./card";
+import { CheckBox } from "../check-box";
 
 export const AdCard = ({ post }) => {
   const location = useLocation();
@@ -11,19 +13,11 @@ export const AdCard = ({ post }) => {
   };
 
   return (
-    <div className="ad-card box-container">
+    <Card title={post?.postName} cta={{ copy: "ACTIVE", action: "submit" }}>
+      <CheckBox label="Show on facebook: " />
       <div className="flex-space-between">
-        <div>{post?.postName ?? "No campain name"}</div>
-        <div>
-          Show on Facebook:{" "}
-          <input type="checkbox" id="switch" className="checkbox" />
-          <label htmlFor="switch" className="toggle"></label>
-        </div>
-      </div>
-
-      <div className="body-card">
-        <FacebookCard className="width-50" isCondensed />
-        <div className="cta">
+        <FacebookCard isCondensed />
+        <div className="d-flex">
           <Form action={`/${location.pathname}/${post.id}/edit`}>
             <Button type="submit">Edit</Button>
           </Form>
@@ -32,6 +26,6 @@ export const AdCard = ({ post }) => {
           </Form>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

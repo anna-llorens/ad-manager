@@ -3,10 +3,12 @@
   flex-direction: column;
   background-color: #fff;
   border: 1px solid var(--border-color);
-  border-radius: 3px;
-  max-width: 500px;
   box-shadow: none;
-  padding-top: 16px;
+  width: 70%;
+  h2,
+  h4 {
+    margin: 0;
+  }
 }
 
 /* Card header */
@@ -14,13 +16,13 @@
   padding-inline: 16px;
   padding-bottom: 8px;
 }
-.post-header .company-link {
+.company-link {
   font-weight: var(--font-semi-bold);
 }
-.post-header .facebook-ad-info {
+.facebook-ad-info {
   color: var(--secondary-color);
 }
-.post-header .company-info {
+.company-info {
   display: flex;
   font-size: 14px;
   gap: 8px;
@@ -37,21 +39,18 @@
   background-color: #f0f2f5;
   border-bottom: 1px solid var(--border-color);
   display: flex;
-  padding: 8px;
   font-size: 13px;
-  gap: 8px;
   align-items: center;
 }
-.post-body .company-link {
+.company-link {
   color: var(--secondary-color);
 }
-.post-body .company-name {
+.company-name {
   font-size: 17px;
   font-weight: var(--font-semi-bold);
   color: black;
 }
-
-.post-body .company-data {
+.company-data {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -95,4 +94,11 @@
 
 .top-card-container {
   overflow: hidden;
+}
+
+/* Condensed  */
+.condensed {
+  .post-header {
+    background: red;
+  }
 }

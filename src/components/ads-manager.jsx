@@ -1,14 +1,14 @@
 import React from "react";
 import { AdCard } from "./card/ad-card";
 import { useAppContext } from "../app-context";
-import { AppCard } from "./card/app-card";
+import { Card } from "./card/card";
 import "./ads-manager.css";
 
 export const AdsManager = () => {
   const { product } = useAppContext();
   return (
     <section>
-      <AppCard
+      <Card
         title="Manage Facebook ads"
         cta={{ copy: "Add new post", action: "submit" }}
       >
@@ -23,7 +23,7 @@ export const AdsManager = () => {
             </div>
           ))}
         </div>
-      </AppCard>
+      </Card>
     </section>
   );
 };

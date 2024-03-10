@@ -1,13 +1,13 @@
 import "./products.css";
 import { useAppContext } from "../app-context";
 import { ProductCard } from "./card/product-card";
-import { AppCard } from "./card/app-card";
+import { Card } from "./card/card";
 
 export const Products = ({ className }) => {
   const { products } = useAppContext();
   return (
     <section className={className ?? ""}>
-      <AppCard
+      <Card
         title="Your products"
         cta={{ copy: "Add new product", action: "submit" }}
       >
@@ -27,7 +27,7 @@ export const Products = ({ className }) => {
             🤗 Welcome to Ad Manager! You can start by adding your first product
           </p>
         )}
-      </AppCard>
+      </Card>
     </section>
   );
 };

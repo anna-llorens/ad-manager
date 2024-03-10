@@ -11,6 +11,9 @@
 }
 
 /* Utils */
+.d-flex {
+  display: flex;
+}
 .flex-space-between {
   display: flex;
   justify-content: space-between;

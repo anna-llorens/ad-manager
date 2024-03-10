@@ -3,12 +3,13 @@ import "./facebook-card.css";
 import { ReactComponent as Like } from "../../static/like.svg";
 import { ReactComponent as Comment } from "../../static/comment.svg";
 import { ReactComponent as Share } from "../../static/share.svg";
+import { Card } from "./card";
 
 export const FacebookCard = ({ isCondensed = false, className }) => {
   const { product, ad, company } = useAppContext();
 
   return (
-    <div className={`post ${className ?? ""}`}>
+    <Card className={`post ${isCondensed ? "condensed" : ""}`}>
       <div className="post-header">
         <div className="company-info">
           <img
@@ -62,6 +63,6 @@ export const FacebookCard = ({ isCondensed = false, className }) => {
           </div>
         ) : null}
       </div>
-    </div>
+    </Card>
   );
 };
