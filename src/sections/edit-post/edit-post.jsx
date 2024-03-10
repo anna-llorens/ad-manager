@@ -1,9 +1,9 @@
 import { Form } from "react-router-dom";
-import { useAppContext } from "../app-context";
-import { FacebookCard } from "../components/card/facebook-card";
-import { Card } from "../components/card/card";
+import { useAppContext } from "../../app-context";
+import { Card } from "../../components";
+import { FacebookPost } from "../../components";
 
-export default function EditView({ className }) {
+export const EditPost = ({ className }) => {
   const { ad } = useAppContext();
   return (
     <Form method="post" id="contact-form" className={`${className ?? ""} edit`}>
@@ -11,8 +11,8 @@ export default function EditView({ className }) {
         <p>
           <b>Post ad: </b> {ad?.postName}
         </p>
-        <FacebookCard />
+        <FacebookPost />
       </Card>
     </Form>
   );
-}
+};

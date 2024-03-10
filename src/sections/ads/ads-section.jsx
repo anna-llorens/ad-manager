@@ -1,21 +1,21 @@
 import React from "react";
-import { AdCard } from "./card/ad-card";
-import { useAppContext } from "../app-context";
-import { Card } from "./card/card";
-import "./ads-manager.scss";
+import { AdItem } from "./ad-item";
+import { useAppContext } from "../../app-context";
+import { Card } from "../../components";
+import "./ads-section.scss";
 
-export const AdsManager = () => {
+export const AdsSection = () => {
   const { product } = useAppContext();
   return (
     <section>
       <Card
-        title="Manage Facebook ads"
+        title="Manage Facebook product ads"
         action={{ copy: "Add new post", action: "submit" }}
       >
         <div className="ads-list">
           {product?.prodAds?.map((post) => (
             <div key={post.id} className="post-container">
-              <AdCard
+              <AdItem
                 post={post}
                 productImage={product?.productImage}
                 productName={product?.productName}

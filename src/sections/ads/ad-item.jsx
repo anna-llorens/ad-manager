@@ -1,11 +1,10 @@
 import { Form, useLocation } from "react-router-dom";
-import { Button } from "../button";
+import { Button, Card, Badge } from "../../components";
+import { FacebookPost } from "../../components";
 
-import { FacebookCard } from "./facebook-card";
-import { Card } from "./card";
-import { CheckBox } from "../check-box";
+import "./ad-item.css";
 
-export const AdCard = ({ post }) => {
+export const AdItem = ({ post }) => {
   const location = useLocation();
 
   const onDeleteAd = () => {
@@ -13,14 +12,17 @@ export const AdCard = ({ post }) => {
   };
 
   return (
-    <Card title={post?.postName} action={post.status}>
-      {/* <CheckBox label="Show on facebook: " /> */}
-      <div className="flex-space-between">
-        <FacebookCard isCondensed />
-        <div className="d-flex">
+    <Card className={post.status}>
+      <div>
+        <Badge status={post?.status} />
+      </div>
+      <div className="ad-item-body">
+        <FacebookPost isCondensed />
+        <div className="cta">
           <Form action={`/${location.pathname}/${post.id}/edit`}>
             <Button type="submit">Edit</Button>
           </Form>
+
           <Form method="post" action="destroy" onSubmit={onDeleteAd}>
             <Button type="submit">Delete</Button>
           </Form>

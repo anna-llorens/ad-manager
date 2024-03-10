@@ -1,28 +1,34 @@
-import { mockAd, mockProduct, mockCompany } from "./data";
+import { mockAd, mockProduct, mockCompany, productImageMap } from "./data";
+
+// Get a different status each time the app re-renders
+const status = ["active", "disabled", "inactive"];
+const getRandomStatus = () => status[Math.floor(Math.random() * status.length)];
 
 const getRandomPrice = (min = 15, max = 200) =>
   Math.round((Math.random() * (max - min) + min) * 100) / 100;
 
-const generatePostAds = (postName, postId) =>
-  Array.from({ length: 7 }, (_, index) => ({
+const generatePostAds = (productId) =>
+  Array.from({ length: Math.floor(Math.random() * 11) }, (_, index) => ({
     ...mockAd,
-    id: `${postId}ad${index}`,
-    postName,
-    status: Math.random() > 0.5 ? "active" : "disabled",
+    id: `${productId}Ad${index}`,
+    postName:
+      "This is a very long post name that should be shortened to show 2 lines",
+    status: getRandomStatus(),
   }));
 
-const generateProducts = (productName, numProducts = 6) => {
-  return Array.from({ length: numProducts }, (_, index) => ({
+const generateProducts = () => {
+  const productNames = Object.keys(productImageMap);
+  return productNames.map((productName, index) => ({
     ...mockProduct,
     id: `prod${index}`,
-    productName,
-    prodAds: generatePostAds(productName, `prod${index}`),
     price: `${getRandomPrice()} $`,
+    prodAds: generatePostAds(`prod${index}`),
+    productName: productName,
+    productImage: productImageMap[productName],
   }));
 };
 
-export const getMockedData = (productName) => ({
-  hola: "hola",
-  mockCompany,
-  products: generateProducts(productName),
+export const getMockedData = () => ({
+  company: mockCompany,
+  products: generateProducts(),
 });

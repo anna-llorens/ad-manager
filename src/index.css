@@ -7,9 +7,10 @@
   --header-height: 60px;
   --secondary-color: #65676b;
   --black-color: #050505;
+  --white-color: #ffffff;
   --border-color: #dddfe2;
-  --box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
-  --font-semi-bold: 600;
+  --box-shadow: 4px 4px 15px rgba(#000, 0.15);
+  --font-bold: 600;
   --z-fixed: 100;
 }
 
@@ -59,10 +60,4 @@ li {
 /*Delete button */
 form[action$="destroy"] button {
   color: #f44250;
-}
-// Small screens (landscape phones, 576px and up)
-@media (max-width: 768px) {
-  .avatar {
-    display: none;
-  }
 }

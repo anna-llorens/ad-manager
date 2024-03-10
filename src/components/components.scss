@@ -1,0 +1,107 @@
+// Avatar
+.avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 550px) {
+  .avatar {
+    display: none;
+  }
+}
+// Badge
+.badge {
+  padding: 2px 8px;
+  border-radius: 16px;
+  color: var(--white-color);
+  font-size: 12px;
+  min-width: 50px;
+  font-weight: var(--font-bold);
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+
+  &.inactive {
+    background-color: rgb(207, 84, 84);
+  }
+  &.active {
+    background: green;
+  }
+  &.disabled {
+    background: rgb(119, 119, 119);
+  }
+}
+
+// Button
+.button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  line-height: 1.5;
+  margin: 4px;
+  min-width: 100px;
+}
+
+.button {
+  color: #3992ff;
+  font-weight: 500;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.button:active {
+  box-shadow: var(--box-shadow);
+  transform: translateY(1px);
+}
+
+button[action$="save"],
+button[action$="destroy"] {
+  color: #f44250;
+}
+
+// Card
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3),
+    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+  padding: 12px;
+  border-radius: 4px;
+  h2,
+  h4 {
+    margin: 0;
+  }
+}
+// Styles for Product item component
+.card.active {
+  border: 2px solid green;
+}
+.card.disabled {
+  border: 2px solid rgb(119, 119, 119);
+}
+.card.inactive {
+  border: 2px solid rgb(207, 84, 84);
+}
+// Label
+.label.secondary {
+  color: var(--secondary-color);
+}
+.label.bold {
+  font-weight: var(--font-bold);
+}

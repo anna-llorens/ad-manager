@@ -1,9 +1,9 @@
 import App from "./app";
-import ErrorPage from "./views/error-view";
-import EditView from "./views/edit-view";
+import { ErrorPage } from "./components";
+import { EditPost } from "./sections/edit-post/edit-post";
 
 import { createBrowserRouter } from "react-router-dom";
-import { Body } from "./sections/body";
+import { AdsSection } from "./sections/ads/ads-section";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -12,11 +12,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "products/:productId",
-        element: <Body />,
+        element: <AdsSection />,
       },
       {
         path: ":productId/:postId/edit",
-        element: <EditView className="main" />,
+        element: <EditPost className="main" />,
       },
     ],
   },

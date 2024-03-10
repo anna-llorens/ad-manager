@@ -27,7 +27,5 @@ export const useAppContext = () => {
     setAd(product?.prodAds?.find((ad) => ad.id === postId));
   }, [postId, product?.prodAds]);
 
-  console.log("data", data);
-
   return { company, products, product, ad };
 };
