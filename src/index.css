@@ -57,7 +57,27 @@ a {
 li {
   list-style: none;
 }
+
 /*Delete button */
 form[action$="destroy"] button {
   color: #f44250;
+}
+
+/* Utils */
+.d-flex {
+  display: flex;
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-line-clamp: 1;
 }

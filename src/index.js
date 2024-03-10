@@ -6,6 +6,7 @@ import { router } from "./router";
 import { AppContext } from "./app-context";
 import { getMockedData } from "./helpers";
 const data = getMockedData();
+console.log(data);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

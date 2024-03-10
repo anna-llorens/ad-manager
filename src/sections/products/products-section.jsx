@@ -6,13 +6,14 @@ import "./products-section.scss";
 
 export const ProductsSection = ({ className }) => {
   const { products } = useAppContext();
+
   return (
     <section className={className ?? ""}>
       <Card
         title="Your products"
         action={{ copy: "Add new product", action: "submit" }}
       >
-        <Label isBol />
+        <Label isBold />
         {products?.length ? (
           <div className="products-section">
             {products?.map((product) => (

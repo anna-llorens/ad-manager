@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useAppContext } from "../app-context";
+import "./header.scss";
 
 export const Header = () => {
-  const { company } = useAppContext();
   return (
     <header className="header sticky flex-space-between ">
       <h4>
-        <Link to="/"> Products Ad Manager</Link>
+        <Link to="/products">List of products</Link>
       </h4>
-      <p>{company?.name ?? "Set up your company name"}</p>
+      <p>Products Ad manager</p>
     </header>
   );
 };

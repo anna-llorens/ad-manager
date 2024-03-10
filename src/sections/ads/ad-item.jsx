@@ -12,10 +12,8 @@ export const AdItem = ({ post }) => {
   };
 
   return (
-    <Card className={post.status}>
-      <div>
-        <Badge status={post?.status} />
-      </div>
+    <Card className={`${post.status} ad-item`}>
+      <Badge status={post?.status} />
       <div className="ad-item-body">
         <FacebookPost isCondensed />
         <div className="cta">

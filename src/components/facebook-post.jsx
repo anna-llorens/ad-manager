@@ -2,15 +2,8 @@ import { useAppContext } from "../app-context";
 import { ReactComponent as Like } from "../static/like.svg";
 import { ReactComponent as Comment } from "../static/comment.svg";
 import { ReactComponent as Share } from "../static/share.svg";
-import { Avatar, Card, Label } from ".";
+import { Avatar, Card, Label, SocialButton } from ".";
 import "./facebook-post.scss";
-
-const SocialButton = ({ Icon, label }) => (
-  <div className="social-button">
-    <Icon className="social-icon" />
-    {label}
-  </div>
-);
 
 export const FacebookPost = ({ isCondensed }) => {
   const { product, ad, company } = useAppContext();

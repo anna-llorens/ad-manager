@@ -1,5 +1,6 @@
 // App atom components
 import "./components.scss";
+import { useRouteError } from "react-router-dom";
 
 export const Avatar = ({ src, alt, className }) => (
   <img className={`avatar ${className ?? ""}`} src={src} alt={alt} />
@@ -18,7 +19,7 @@ export const Button = ({ children, ...props }) => (
 export const Card = ({ title, className, action, children }) => (
   <div className={`card ${className ?? ""}`}>
     <div className="flex-space-between">
-      {title ? <h4>{title}</h4> : null}
+      {title ?? null}
       {action ? (
         <Button type="submit" action={action?.action}>
           {action?.copy}
@@ -38,3 +39,23 @@ export const Label = ({ isBold, children, variant = "primary", className }) => (
     {children}
   </span>
 );
+
+export const SocialButton = ({ Icon, label }) => (
+  <div className="social-button">
+    <Icon className="social-icon" />
+    {label}
+  </div>
+);
+
+export const ErrorPage = () => {
+  const error = useRouteError();
+  return (
+    <div className="error-view">
+      <h1>Oops!</h1>
+      <p>Sorry, an unexpected error has occurred.</p>
+      <p>
+        <i>{error.statusText || error.message}</i>
+      </p>
+    </div>
+  );
+};

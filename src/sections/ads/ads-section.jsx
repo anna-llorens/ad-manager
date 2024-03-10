@@ -6,10 +6,15 @@ import "./ads-section.scss";
 
 export const AdsSection = () => {
   const { product } = useAppContext();
+
   return (
     <section>
       <Card
-        title="Manage Facebook product ads"
+        title={
+          <>
+            <h4>Ads for: </h4> <h2>{product?.productName}</h2>
+          </>
+        }
         action={{ copy: "Add new post", action: "submit" }}
       >
         <div className="ads-list">

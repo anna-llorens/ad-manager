@@ -1,0 +1,21 @@
+.header {
+  z-index: var(--header-height);
+  padding: 10px 16px;
+  background: #555555;
+  color: #f1f1f1;
+  a {
+    color: #f1f1f1;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .main {
+  padding-top: var(--header-height);
+}
+
+.main {
+  padding: 16px;
+}

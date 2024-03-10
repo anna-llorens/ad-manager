@@ -11,12 +11,12 @@
   margin: 0;
   white-space: nowrap;
 }
-
 @media (max-width: 550px) {
   .avatar {
     display: none;
   }
 }
+
 // Badge
 .badge {
   padding: 2px 8px;
@@ -28,10 +28,6 @@
   text-align: center;
   width: fit-content;
   height: fit-content;
-
-  &.inactive {
-    background-color: rgb(207, 84, 84);
-  }
   &.active {
     background: green;
   }
@@ -39,7 +35,6 @@
     background: rgb(119, 119, 119);
   }
 }
-
 // Button
 .button {
   font-size: 1rem;
@@ -53,7 +48,6 @@
   margin: 4px;
   min-width: 100px;
 }
-
 .button {
   color: #3992ff;
   font-weight: 500;
@@ -67,12 +61,10 @@
   box-shadow: var(--box-shadow);
   transform: translateY(1px);
 }
-
 button[action$="save"],
 button[action$="destroy"] {
   color: #f44250;
 }
-
 // Card
 .card {
   display: flex;
@@ -88,20 +80,25 @@ button[action$="destroy"] {
     margin: 0;
   }
 }
-// Styles for Product item component
-.card.active {
-  border: 2px solid green;
-}
-.card.disabled {
-  border: 2px solid rgb(119, 119, 119);
-}
-.card.inactive {
-  border: 2px solid rgb(207, 84, 84);
-}
 // Label
 .label.secondary {
   color: var(--secondary-color);
 }
 .label.bold {
+  font-weight: var(--font-bold);
+}
+
+// Social button
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  color: var(--secondary-color);
+  font-size: 14px;
   font-weight: var(--font-bold);
 }
