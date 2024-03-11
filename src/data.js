@@ -23,6 +23,18 @@ export const productImageMap = {
     "https://webapi-prod.technogym.com/dw/image/v2/BFLQ_PRD/on/demandware.static/-/Sites-tg-catalog-master/default/dw0fbc7947/product/A00000LRG/myrun+bench_pdp%20(1).jpg",
   "Exercise bike":
     "https://webapi-prod.technogym.com/dw/image/v2/BFLQ_PRD/on/demandware.static/-/Sites-tg-catalog-master/default/dwa40ac70b/product/A00000LCG/cycle+bench_pdp%20(1).jpg",
+  Kettlebell_1:
+    "https://static01.nyt.com/images/2023/04/25/multimedia/WNT-KETTLEBELLS1-kgwl/WNT-KETTLEBELLS1-kgwl-superJumbo.jpg",
+  "Durable Resistance band_1":
+    "https://res.cloudinary.com/dyiuxe5fa/image/upload/v1626332994/coding-challenge/resistance.jpg",
+  "Foam roller_1":
+    "https://sideaita.net/wp-content/uploads/2018/08/0495-0498-Palle-mediche-con-maniglie-new-1.jpg",
+  "Medicine ball_1":
+    "https://www.eatthis.com/wp-content/uploads/sites/4/2022/08/man-foam-roller-knee-pain.jpg",
+  "Boxing gloves_1":
+    "https://media.istockphoto.com/id/1250685727/vector/realistic-pairs-of-red-boxing-gloves.jpg?s=612x612&w=0&k=20&c=8_bpUgjGLFEy5WKkRMEaKmdpW9MRQFt6Z7wZ-Fq0MSY=",
+  "Pull-up bar_1":
+    "https://decathlon.com.sa/cdn/shop/products/b73a27f47171a99d9f7b01d566aee916_675x.progressive.jpg",
 };
 
 export const mockCompany = {

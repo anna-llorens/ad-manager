@@ -12,6 +12,9 @@
   --box-shadow: 4px 4px 15px rgba(#000, 0.15);
   --font-bold: 600;
   --z-fixed: 100;
+  --small-screen: 576px;
+  --medium-screen: 768px;
+  --large-screen: 992px;
 }
 
 body {

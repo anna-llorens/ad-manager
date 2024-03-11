@@ -1,0 +1,14 @@
+.product-section {
+  display: flex;
+  gap: 16px;
+}
+.outlet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 3000px;
+}
+
+$mobile-breakpoint: 576px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 992px;

@@ -9,16 +9,17 @@ const generatePostAds = (productId, prodAds) =>
     id: `${productId}Ad${index}`,
     postName:
       "This is a very long post name that should be shortened to show 2 lines",
-    status: Math.random() > 0.5 ? "active" : "disabled", // Generates a different state each time the app re-renders the component
+    status: Math.random() > 0.5 ? "active" : "disabled", // Generates a different state each time the app re-renders the component. Dev purposes only.
   }));
 
 const generateProducts = () => {
   const productNames = Object.keys(productImageMap);
+  console.log(productNames.length);
   return productNames.map((productName, index) => ({
     ...mockProduct,
     id: `prod${index}`,
     price: `${getRandomPrice()} $`,
-    prodAds: generatePostAds(`prod${index}`, index + 2 * 1), // Generate a different number of ads for each product
+    prodAds: generatePostAds(`prod${index}`, index + 2 * 1), // Generate a different number of ads for each product id.
     productName: productName,
     productImage: productImageMap[productName],
   }));

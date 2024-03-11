@@ -1,6 +1,14 @@
+@import "../../app";
+
 .products-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, 250px);
   row-gap: 8px;
   column-gap: 8px;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .products-section {
+    grid-template-columns: repeat(auto-fit, 150px);
+  }
 }

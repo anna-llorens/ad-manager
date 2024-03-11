@@ -16,7 +16,7 @@ export const ProductItem = ({ id, productImage, productName }) => {
       className={`product-item ${isActive ? "active" : ""}`}
       href={`/products/${id}`}
     >
-      <Avatar src={productImage} alt="Product preview" className="avatar" />
+      <Avatar src={productImage} alt="Product preview" size="small" />
       <Label className="product-name" isBold>
         {productName}
       </Label>

@@ -4,11 +4,11 @@ import { Card, Label } from "../../components";
 
 import "./products-section.scss";
 
-export const ProductsSection = ({ className }) => {
+export const ProductsSection = ({ className, isCondensed }) => {
   const { products } = useAppContext();
 
   return (
-    <section className={className ?? ""}>
+    <div className={`${className ?? ""} ${isCondensed ? "condensed" : ""}`}>
       <Card
         title="Your products"
         action={{ copy: "Add new product", action: "submit" }}
@@ -32,6 +32,6 @@ export const ProductsSection = ({ className }) => {
           </p>
         )}
       </Card>
-    </section>
+    </div>
   );
 };

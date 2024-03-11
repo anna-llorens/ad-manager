@@ -2,12 +2,18 @@
 import "./components.scss";
 import { useRouteError } from "react-router-dom";
 
-export const Avatar = ({ src, alt, className }) => (
-  <img className={`avatar ${className ?? ""}`} src={src} alt={alt} />
+export const Avatar = ({ src, alt, size }) => (
+  <img
+    className={`avatar ${size === "small" ? size : ""}`}
+    src={src}
+    alt={alt}
+  />
 );
 
-export const Badge = ({ status }) => (
-  <div className={`badge ${status}`}>{status.toUpperCase()}</div>
+export const Badge = ({ status, size }) => (
+  <div className={`badge ${status} ${size === "small" ?? ""}`}>
+    {status.toUpperCase()}
+  </div>
 );
 
 export const Button = ({ children, ...props }) => (

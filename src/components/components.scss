@@ -1,3 +1,4 @@
+@import "../app";
 // Avatar
 .avatar {
   width: 40px;
@@ -11,7 +12,13 @@
   margin: 0;
   white-space: nowrap;
 }
-@media (max-width: 550px) {
+.avatar.small {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+@media (max-width: $mobile-breakpoint) {
   .avatar {
     display: none;
   }
@@ -41,12 +48,12 @@
   font-family: inherit;
   border: none;
   border-radius: 8px;
-  padding: 0.5rem 0.75rem;
+  padding: 8px;
   box-shadow: var(--box-shadow);
   background-color: white;
   line-height: 1.5;
   margin: 4px;
-  min-width: 100px;
+  min-width: 50px;
 }
 .button {
   color: #3992ff;

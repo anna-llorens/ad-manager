@@ -7,9 +7,9 @@ export const Header = () => {
   return (
     <header className="header sticky flex-space-between ">
       <h4>
-        <Link to="/products">List of products</Link>
+        <Link to="/">Products Ad managers</Link>
       </h4>
-      <p>Products Ad manager</p>
+      <p>Max's Sporting Goods</p>
     </header>
   );
 };
