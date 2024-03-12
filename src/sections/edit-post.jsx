@@ -1,5 +1,4 @@
-import { Card } from "../../components";
-import { FacebookPost } from "../../components";
+import { FacebookPost, Card, Tooltip } from "../components";
 
 export const EditPost = () => {
   return (

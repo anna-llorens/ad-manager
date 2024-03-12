@@ -2,11 +2,20 @@ import { useAppContext } from "../app-context";
 import { ReactComponent as Like } from "../static/like.svg";
 import { ReactComponent as Comment } from "../static/comment.svg";
 import { ReactComponent as Share } from "../static/share.svg";
+import { EditableElement } from "./editable-element";
+import { useState } from "react";
 import { Avatar, Card, Label, SocialButton } from ".";
 import "./facebook-post.scss";
 
 export const FacebookPost = ({ isCondensed }) => {
   const { product, ad, company } = useAppContext();
+
+  //todo update context state with value
+  const [postName, setValue] = useState(company?.url);
+
+  const handleChange = (value) => {
+    setValue(value);
+  };
 
   return (
     <Card className={`post ${isCondensed ? "condensed" : ""}`}>
@@ -15,6 +24,11 @@ export const FacebookPost = ({ isCondensed }) => {
           <Avatar src={company?.logo} alt="Company logo" />
           <div className="post-header-section">
             <Label isBold>{company?.url}</Label>
+            <EditableElement onChange={handleChange}>
+              <div style={{ outline: "none" }}>
+                <p>{company?.url}</p>
+              </div>
+            </EditableElement>
             <Label variant="secondary">Sponsored · 🌎</Label>
           </div>
         </div>

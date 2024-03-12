@@ -1,6 +1,6 @@
 import App from "./app";
 import { ErrorPage } from "./components";
-import { EditPost } from "./sections/edit-post/edit-post";
+import { EditPost } from "./sections/edit-post";
 
 import { createBrowserRouter } from "react-router-dom";
 import { AdsSection } from "./sections/ads/ads-section";
